@@ -40,7 +40,7 @@
               data-aos="fade-right"
               href="https://www.linkedin.com/in/jpst-dev/"
               target="_blank"
-              class="h-16 w-16 flex justify-center items-center rounded-lg bg-gray-950 border-2 border-gray-700 hover:border-[#a277ff] transition duration-300"
+              class="h-16 w-16 flex justify-center items-center rounded-lg bg-gray-950 border-2 hover:text-[#a277ff] border-gray-700 hover:border-[#a277ff] transition duration-300"
             >
               <li>
                 <font-awesome-icon :icon="faLinkedin" class="w-9 h-9" />
@@ -51,7 +51,7 @@
               data-aos-delay="150"
               href="https://github.com/jpst-dev"
               target="_blank"
-              class="h-16 w-16 flex justify-center items-center rounded-lg bg-gray-950 border-2 border-gray-700 hover:border-[#a277ff] transition duration-300"
+              class="h-16 w-16 flex justify-center items-center rounded-lg bg-gray-950 border-2 hover:text-[#a277ff] border-gray-700 hover:border-[#a277ff] transition duration-300"
             >
               <li>
                 <font-awesome-icon :icon="faGithub" class="w-9 h-9" />

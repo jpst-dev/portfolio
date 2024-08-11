@@ -33,7 +33,7 @@
               'text-white': activeSection !== 'home',
             }"
             @click="setActiveSection('home')"
-            >Home</a
+            >Início</a
           >
         </li>
         <li>
@@ -44,7 +44,7 @@
               'text-white': activeSection !== 'about',
             }"
             @click="setActiveSection('about')"
-            >About</a
+            >Sobre</a
           >
         </li>
         <li>
@@ -55,7 +55,7 @@
               'text-white': activeSection !== 'projects',
             }"
             @click="setActiveSection('projects')"
-            >Projects</a
+            >Projetos</a
           >
         </li>
         <li>
@@ -66,7 +66,7 @@
               'text-white': activeSection !== 'contact',
             }"
             @click="setActiveSection('contact')"
-            >Contact</a
+            >Contato</a
           >
         </li>
       </ul>
@@ -105,7 +105,7 @@
               'text-gray-400': activeSection === 'home',
               'text-white': activeSection !== 'home',
             }"
-            >Home</a
+            >Início</a
           >
         </li>
         <li>
@@ -119,7 +119,7 @@
               'text-gray-400': activeSection === 'about',
               'text-white': activeSection !== 'about',
             }"
-            >About</a
+            >Sobre</a
           >
         </li>
         <li>
@@ -133,7 +133,7 @@
               'text-gray-400': activeSection === 'projects',
               'text-white': activeSection !== 'projects',
             }"
-            >Projects</a
+            >Projetos</a
           >
         </li>
         <li>
@@ -147,7 +147,7 @@
               'text-gray-400': activeSection === 'contact',
               'text-white': activeSection !== 'contact',
             }"
-            >Contact</a
+            >Contato</a
           >
         </li>
       </ul>

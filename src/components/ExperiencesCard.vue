@@ -38,8 +38,12 @@
           Experiências Profissionais
         </h3>
         <p class="text-gray-300 text-center md:text-left">
-          {{ experienceValue.role }}
-          <br />
+          <div class="mb-4 flex flex-row gap-2 justify-between">
+            <p class="text-[#a277ff]">{{ experienceValue.company }}</p>
+            <p class="text-[#a277ff]">{{ experienceValue.role }}</p>
+            <p class="text-[#a277ff]">{{ experienceValue.period }}</p>
+          </div>
+          
           {{ experienceValue.description }}
         </p>
       </div>

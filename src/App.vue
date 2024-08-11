@@ -69,28 +69,27 @@ const handleScroll = () => {
   }
 };
 
+const handleAnchorClick = (e: Event) => {
+  e.preventDefault();
+  const target = e.currentTarget as HTMLElement;
+  const href = target.getAttribute("href");
+  if (href) {
+    const targetElement = document.querySelector(href) as HTMLElement;
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  }
+};
+
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
 
-  // Implementar smooth scroll para âncoras
   const anchorLinks = document.querySelectorAll('a[href^="#"]:not([href="#"])');
   anchorLinks.forEach((anchor) => {
-    anchor.addEventListener("click", (e) => {
-      e.preventDefault();
-      const target = e.target as HTMLElement; // Add a type assertion
-      const href = target?.getAttribute("href"); // Use optional chaining
-      if (href) {
-        const targetElement = document.querySelector(href);
-        if (targetElement) {
-          const targetElement = document.querySelector(href) as HTMLElement;
-
-          window.scrollTo({
-            top: targetElement.offsetTop,
-            behavior: "smooth",
-          });
-        }
-      }
-    });
+    anchor.addEventListener("click", handleAnchorClick);
   });
 });
 
@@ -99,22 +98,7 @@ onUnmounted(() => {
 
   const anchorLinks = document.querySelectorAll('a[href^="#"]:not([href="#"])');
   anchorLinks.forEach((anchor) => {
-    anchor.addEventListener("click", (e) => {
-      e.preventDefault();
-      const target = e.target as HTMLElement; // Add a type assertion
-      const href = target?.getAttribute("href"); // Use optional chaining
-      if (href) {
-        const targetElement = document.querySelector(href);
-        if (targetElement) {
-          const targetElement = document.querySelector(href) as HTMLElement;
-
-          window.scrollTo({
-            top: targetElement.offsetTop,
-            behavior: "smooth",
-          });
-        }
-      }
-    });
+    anchor.removeEventListener("click", handleAnchorClick);
   });
 });
 </script>
